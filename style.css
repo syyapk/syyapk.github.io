@@ -1,0 +1,489 @@
+body {
+    background-color: #d6eef6;
+    max-width: 800px;
+    min-width: 300px;
+    margin: auto;
+}
+
+header {
+    width: 100%; 
+    height: 10%;
+    overflow: hidden;
+}
+
+#page /*div box containing everything on the page other than navigation links*/ { 
+    background-color: #ffffff;
+    padding: 10px 5px 5px 5px;
+    
+}
+
+#about /*div box containing everything other than navigation links AND logo*/ {
+    text-align: center;
+}
+
+#socialmed /*social media links div*/ {
+    
+}
+
+/*Unvisited links*/
+a:link {
+    color: #ffffff;
+}
+
+a:visited {
+    color: #ffffff;
+}
+
+#nav {
+    width: 100%;
+}
+
+
+ul {
+    list-style-type: none; /*removes bullet points*/
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*background-color: #c5f5ff;*/
+}
+
+li#socialmedia {
+    float: right;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+li#navigation {
+    float: left;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li#navigation a:hover {
+    background-color: #9aeeff; /*navigation links change color on hover, social media buttons do not*/
+}
+
+li#socialmedia a:hover {
+    opacity: 0.5;
+}
+
+.socialimg /*social media button images*/ {
+    height: 40px;
+    width: 40px;
+}
+
+/*the page which the user is currently using*/
+.active {
+    background-color: #6fe6ff;
+}
+
+
+.logo {
+    display: block;
+    margin: auto;
+    height: 250px;
+    width: 350px;
+}
+
+.logo:hover {
+    opacity: 0.6;
+}
+
+/*Headings text*/
+h1 {
+    color: #FFB4D9;
+    font-family: 'Slabo 27px', serif;
+    position: relative;
+    text-align: center;
+}
+
+h1 span {
+    background: #fff;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1;
+}
+
+h1:before {
+    background: #c5f5ff;
+    content: "";
+    display: block;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+h1:before {
+    left: 0;
+}    
+
+/*recipes headings*/ 
+h2 {
+    color: #000000;
+    font-family: 'Clicker Script', cursive;
+    font-size: 30px;
+    text-align: left;
+    padding-left: 15px;
+    text-shadow: 2px 2px #6fe6ff;
+}
+
+h2.welcome {
+    color: #000000;
+    font-family: 'Clicker Script', cursive;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px #6fe6ff;
+}
+
+/*Navigation links texts*/ 
+h3 {
+    color: #ffffff;
+    float: left;
+    font-family: 'Slabo 27px', serif;
+}
+
+/*Recipes headings*/
+h4 {
+    color: #6fe6ff;
+    list-style-type: ;
+    font-family: 'Slabo 27px', serif;
+    font-size: 160%;
+    text-align: left;
+    padding-left: 1%;
+}
+
+h5 {
+    font-size: 20px;
+    text-align: left;
+}
+
+p {
+    color: #000000;
+    font-family: 'Slabo 27px', serif;
+    font-size: 18px;
+}
+
+p.disclaimer {
+    font-size: 10px;
+    text-align: center;
+}
+
+ul.list {
+    background: #FFB4D9;
+    list-style-type: circle;
+    padding:20px
+}
+
+li.list {
+    background: #ffdced;
+    padding-left: 15px;
+    text-align: left;
+    margin: 5px;
+}
+
+ol.guide {
+    background: #6fe6ff;
+    list-style-type: lower-roman;
+    padding: 20px;
+}
+
+li.guide {
+    background: #dcf9ff;
+    padding-left: 15px;
+    text-align: left;
+    margin: 5px;
+}
+
+.recipelist {
+    list-style-type: circle;
+}
+
+/*homepage paragraph*/
+.paragraph {
+    border: 0.5px solid #000000;
+    color: #000000;
+    font-family: 'Slabo 27px', serif;
+    font-size: 18px;
+    padding: 30px;
+}
+
+.ingredients {
+    color: #FFB4D9;
+    font-size: 25px;
+    text-align: left;
+    padding-left: 2%;
+}
+
+.recipe /*recipes paragraphs*/ {
+    border: 1px solid #000000;
+    color: #000000;
+    font-family: 'Slabo 27px', serif;
+    font-size: 18px;
+    padding: 5% 0 5% 5%;
+    text-align: left;
+}
+
+/*Text fade overlay images on recipes page*/
+.reccontainer {
+    margin: auto;
+    position: relative;
+    width: 50%;
+}
+
+.recimage {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /*images stand out, adds a shadow*/
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+
+.reccontainer:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: #FFB4D9;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+/*Text fade overlay ends here*/
+
+.recbelow /*headings - cake and cookie recipes(below brownies)*/ {
+    padding-top: 20%;
+}
+
+/*slideshow images in the homepage*/
+.slideimg {
+    border-radius: 15%; /*makes images look round*/
+    height: 70%;
+    width: 70%;
+    margin: auto;
+    padding-bottom: 2%;
+}
+
+img.macaroon {
+    height: 100%;
+    width: 100%;
+}
+
+/*MANUAL SLIDESHOW*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.galleyrslide {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+    left: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.caption {
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #ffffff;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The bullets indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover /*image seen on slide*/ {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+/*Manual Slideshow css coding ends here*/
+
+
+/*overlay text on slideshow*/
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.overlayimg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fdcbd2;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.container:hover .overlay {
+    height: 100%;
+}
+
+.text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+/*overlay text on slideshow*/
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #6fe6ff;
+    color: white;
+    padding: 16px;
+    font-family: 'Slabo 27px', serif;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/*div container for dropdown menu*/
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding-top: 20px;
+}
+
+/* Dropdown content - hidden*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/*dropdown links*/
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    opacity: 0.5;
+}
+    
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #9aeeff;
+}
+
+/*little images on the bottom of the page*/
+.footer {
+    width: 24%;
+}

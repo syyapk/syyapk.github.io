@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Clicker+Script|Dancing+Script|Slabo+27px" rel="stylesheet"> <!--Body fonts-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bakers Studio</title>
+</head>
+    
+<body>
+<div id="page">
+<div class="dropdown">
+<button class="dropbtn"><a href="homepage.html">Home</a></button>
+    <div class="dropdown-content">
+    <a href="homepage.html">About</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn"><a href="recipes.html">Recipes</a></button>
+<div class="dropdown-content">
+    <a href="brownierecipes.html">Brownie Recipes</a>
+    <a href="cakerecipes.html">Cake Recipes</a>
+    <a href="cookierecipes.html">Cookie Recipes</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn"><a href="gallery.html">Gallery</a></button>
+<div class="dropdown-content">
+</div>
+</div>
+
+
+<br><a href="homepage.html"><img src="http://i.imgur.com/ALc17gu.png" title="Bakers studio" class="logo"/></a> <!--Bakers Studio Logo, button leads to homepage-->
+<hr>
+
+<div id="socialmed"> <!--Social Media links-->
+<ul>
+    <li id="socialmedia"><a href="https://nz.pinterest.com/vinnyheu/"><img title="Pinterest" alt="Pinterest" src="https://socialmediawidgets.files.wordpress.com/2014/03/13_pinterest.png" class="socialimg"/></a>
+    <li id="socialmedia"><a href="https://www.facebook.com/search/top/?q=baking&ref=eyJzaWQiOiIwLjIzMTU2NzI5Mzc1NTc3NzM0IiwicXMiOiJKVFZDSlRJeVltRnJhVzVuSlRJeUpUVkUiLCJndiI6ImJlZTA5ZjkzZmE3MzJjZmE1OWExY2I2ZDlmNDUwZDM4OTI0MjRlNDkiLCJlbnRfaWRzIjpbXX0"><img title="Facebook" alt="Facebook" src="https://socialmediawidgets.files.wordpress.com/2014/03/02_facebook.png" class="socialimg"/></a>
+    <li id="socialmedia"><a href="https://www.instagram.com/mstakendown/?hl=en"><img title="Instagram" alt="Instagram" src="https://socialmediawidgets.files.wordpress.com/2014/03/10_instagram.png" class="socialimg"/></a>
+</ul></div>
+    
+<div id="about">
+<h1><span>About Bakers Studio</span></h1><!--span for hr lines on either side of the words-->
+    <!--images seen on the slideshow-->
+<img class="slideimg" src="https://static.pexels.com/photos/8148/kitchen-cookies-work-cake-8148.jpg">
+<img class="slideimg" src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Macarons%2C_French_made_mini_cakes.JPG">
+<img class="slideimg" src=" https://c1.staticflickr.com/1/53/126070445_82ca5f6f4c_z.jpg?zz=1">
+    
+<script>
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slideimg");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1} 
+    x[slideIndex-1].style.display = "block"; 
+    setTimeout(carousel, 5000); // image alternates every 5 seconds
+}
+</script>
+    <h2 class="welcome">Welcome to Baker's Studio!</h2>
+    <p class="paragraph">If you're here to become inspired or learn simple recipes to get your passion for baking started, then you've come to the right place!<br><br>We've provded a few easy recipes that anyone can bake. As easy as they are to bake, they taste delicious despite the amount of time you put in to the baking process. <br><br>Don't feel provoked if this is your very first time baking, everyone gets the hang of it after a little bit of practice!</p>
+</div>
+        
+<br>
+<img src="http://i.imgur.com/VKR3wUY.png" class="footer"/>
+<img src="http://i.imgur.com/VKR3wUY.png" class="footer"/>
+<img src="http://i.imgur.com/VKR3wUY.png" class="footer"/>
+<img src="http://i.imgur.com/VKR3wUY.png" class="footer"/>
+<p class="disclaimer">All credit for the images displayed on the website belongs to the irghtful owners. I do not own any of the images.</p>
+</div>
+</body>
+</html>
